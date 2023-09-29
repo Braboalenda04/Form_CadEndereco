@@ -30,5 +30,10 @@ const pesquisarCep = async() => {
     if(cepValido(cep.value)){
         const dados = await fetch(url); //esperar
         const addres = await dados.
+
+            if(adedres.hasOwnProperty('erro')){
+                alert('CEP não encontrado;')
+
+         }
     }
 }
