@@ -29,11 +29,17 @@ const pesquisarCep = async() => {
     const ult = `http://viacep.com.br/ws/${cep.value}/json/`;
     if(cepValido(cep.value)){
         const dados = await fetch(url); //esperar
-        const addres = await dados.
+        const addres = await dados.json();
 
             if(adedres.hasOwnProperty('erro')){
                 alert('CEP não encontrado;')
-
-         }
+            }else{
+                preencherFormulario(addres);
+            }
+    }else{
+        alert('CEP incorreto');
     }
 }
+//Adiciona evento DOM ao input do CEP para executar função pesquisarCep
+
+document.getElementById('cep').addEventListener('focusout', pesquisarCep);
