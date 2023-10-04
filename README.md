@@ -1,29 +1,17 @@
 # Índice
 <h3>repositório criado para a disciplina de Linguagem de Programação I para realização da atividade de criação de Cadastro de endereço.</h3>
 
- 
-
 # Índice
 
 [Introducção](#introduc%C3%A7%C3%A3o)
 
- 
-
 [Descrição](#descri%C3%A7%C3%A3o)
 
- 
-
 [Funcionalidades](#funcionalidades)  
-
  
-
 [Tecnologias Utilizadas](#tecnologias-utilizadas)  
 
- 
-
 [Fontes consultadas](#fontes-consultadas)  
-
- 
 
 [Autor](https://github.com/miguelitto16/Calendario#autor)  
 
@@ -37,48 +25,17 @@ Quando o usuário clica em "Aplicar", o dia selecionado na tabela do calendário
 
 CEP: Permite que o usuário insira o CEP do endereço.
 
- 
-
 `Endereço :` Campo para a rua do endereço.
-
- 
-
 `Número:` Número da residência ou estabelecimento.
-
- 
-
 `Bairro:` Campo para o bairro do endereço.
-
- 
-
 `Cidade:` Permite que o usuário insira a cidade.
-
- 
-
 `Estado:` Campo para o estado.
-
- 
-
 ### Tecnologias utilizadas
-
- 
-
 * HTML5
-
 * CSS
-
 * Bootstrap
-
 * Github
-
 * Visual Studio Code
 
- 
-
- 
-
 ## Autor
-
- 
-
 * [Gabriel](https://github.com/Braboalenda04)
