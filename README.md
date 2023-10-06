@@ -19,7 +19,7 @@ Este é um exemplo simples de um formulário HTML para cadastro de endereços. O
 Quando o usuário clica em "Aplicar", o dia selecionado na tabela do calendário é colorido com a cor escolhida.
 CEP: Permite que o usuário insira o CEP do endereço.
 
-`Endereço :`<p style="color:rgb(0, 102, 255);"> Campo para a rua do endereço.</p>
+`Endereço :`Campo para a rua do endereço.
 `Número:` Número da residência ou estabelecimento.
 `Bairro:` Campo para o bairro do endereço.
 `Cidade:` Permite que o usuário insira a cidade.
