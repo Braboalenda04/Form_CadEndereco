@@ -1,5 +1,7 @@
 # Índice
-<h3>repositório criado para a disciplina de Linguagem de Programação I para realização da atividade de criação de Cadastro de endereço.</h3>
+<h3>Este código é responsável por consumir a API do ViaCEP para buscar informações de endereço com base em um CEP inserido em um formulário HTML. Ele faz uso de funções para limpar o formulário, verificar se o CEP é válido, preencher o formulário com os dados do endereço e lidar com erros ou CEPs incorretos. Além disso, ele adiciona um evento ao campo de entrada de CEP para acionar a pesquisa quando o campo perde o foco.
+Certifique-se de que a página HTML associada tenha os elementos com os IDs corretos para rue o código funcione
+adequadament</h3>
 
 # Índice
 [Introducção](#introduc%C3%A7%C3%A3o)
@@ -14,9 +16,7 @@
 Este é um exemplo simples de um formulário HTML para cadastro de endereços. O formulário foi criado para coletar informações básicas de endereço, como CEP, rua, número, bairro, cidade e estado.
 
 ## Descrição
-
 Quando o usuário clica em "Aplicar", o dia selecionado na tabela do calendário é colorido com a cor escolhida.
-
 CEP: Permite que o usuário insira o CEP do endereço.
 
 `Endereço :` Campo para a rua do endereço.
