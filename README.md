@@ -32,6 +32,7 @@ CEP: Permite que o usuário insira o CEP do endereço.
 * Visual Studio Code
 
 ## Autor
-* [Gabriel](https://github.com/Braboalenda04)
 
-![image](eu.png) 
+<img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/129859768?s=400&u=7c667a43f04683d37a962d0d62cbe409a6897bea&v=4" width="150px">
+
+* [Gabriel](https://github.com/Braboalenda04)
