@@ -14,7 +14,8 @@ adequadament</h3>
 ## Introdução
 
 Este é um exemplo simples de um formulário HTML para cadastro de endereços. O formulário foi criado para coletar informações básicas de endereço, como CEP, rua, número, bairro, cidade e estado.
-
+## função da pagina
+![igf](cep-correto.gif)
 ## Descrição
 Quando o usuário clica em "Aplicar", o dia selecionado na tabela do calendário é colorido com a cor escolhida.
 CEP: Permite que o usuário insira o CEP do endereço.
