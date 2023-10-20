@@ -63,7 +63,6 @@
                   <option value="outro">Outro</option>
               </select>
       
-              <button type="button" onclick="cadastrarUsuario()">Cadastrar</button>
           </form>
       
           <p id="mensagem"></p>
@@ -81,8 +80,14 @@
                       document.getElementById('mensagem').textContent = 'Por favor, preencha todos os campos.';
                       return;
                   }
+
               }
           </script>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+    </form>
+    <script type="text/javascript" src="./controller.js"></script>
 </body>
 
 </html>
