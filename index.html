@@ -39,9 +39,41 @@
             <input id="estado" class="form-control">
         </div>
         <div class="col-12">
-            <h1>Cadastro pessoal</h1>
-            <label for="inputCity" class="form-label">CPF</label>
-            <input type="text" class="form-control" id="CPF">
+          <h1>Cadastro de Usuário</h1>
+
+          <form id="cadastroForm">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" required>
+      
+              <label for="email">Email:</label>
+              <input type="email" id="email" required>
+      
+              <label for="senha">Senha:</label>
+              <input type="password" id="senha" required>
+      
+              <button type="button" onclick="cadastrarUsuario()">Cadastrar</button>
+          </form>
+      
+          <p id="mensagem"></p>
+      
+          <script>
+              function cadastrarUsuario() {
+                  const nome = document.getElementById('nome').value;
+                  const email = document.getElementById('email').value;
+                  const senha = document.getElementById('senha').value;
+      
+                  if (!nome || !email || !senha) {
+                      document.getElementById('mensagem').textContent = 'Por favor, preencha todos os campos.';
+                      return;
+                  }
+      
+                  // Você pode adicionar código para enviar os dados para um servidor aqui.
+                  // Neste exemplo, apenas exibiremos uma mensagem de sucesso.
+      
+                  document.getElementById('mensagem').textContent = `Usuário ${nome} cadastrado com sucesso!`;
+                  document.getElementById('cadastroForm').reset();
+              }
+          </script>
         </div>
         <div class="col-12">
             <button type="submit" class="btn btn-primary">Cadastrar</button>
