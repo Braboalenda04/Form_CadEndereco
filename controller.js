@@ -35,6 +35,7 @@ const pesquisarCep = async() => {
     }else{
         alert('CEP incorreto');
     }
-}
+
 //Adiciona evento DOM ao  input do CEP para executar  função pesqisarCEP
 document.getElementById('cep').addEventListener('focusout',pesquisarCep)
+}
