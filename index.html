@@ -15,78 +15,89 @@
 
     <form class="row g-3">
         <div class="col-md-7">
-            <label for="inputZip" class="form-label">Cep</label>
+            <label for="cep" class="form-label">Cep</label>
             <input type="text" class="form-control" id="cep">
         </div>
         <div class="col-6">
-            <label for="inputAddress" class="form-label">Endereço</label>
+            <label for="rua" class="form-label">Endereço</label>
             <input type="text" class="form-control" id="rua" placeholder="Rua Joaquim Nabuco">
         </div>
         <div class="col-6">
-            <label for="inputAddress" class="form-label">Número da casa</label>
+            <label for="numero" class="form-label">Número da casa</label>
             <input type="text" class="form-control" id="numero">
         </div>
         <div class="col-12">
-            <label for="inputAddress2" class="form-label">Bairro</label>
+            <label for="bairro" class="form-label">Bairro</label>
             <input type="text" class="form-control" id="bairro" placeholder="Apartment, studio, or floor">
         </div>
         <div class="col-md-6">
-            <label for="inputCity" class="form-label">Cidade</label>
+            <label for="cidade" class="form-label">Cidade</label>
             <input type="text" class="form-control" id="cidade">
         </div>
         <div class="col-md-4">
-            <label for="inputState" class="form-label">Estado</label>
+            <label for="estado" class="form-label">Estado</label>
             <input id="estado" class="form-control">
-        </div>    
-          <h1>Cadastro de Usuário</h1>
-
-          <form id="cadastroForm">
-              <label for="nome">Nome:</label>
-              <input type="text" id="nome" required>
-      
-              <label for="sobrenome">Sobrenome:</label>
-              <input type="text" id="sobrenome" required>
-      
-              <label for="email">Email:</label>
-              <input type="email" id="email" required>
-      
-              <label for="senha">Senha:</label>
-              <input type="password" id="senha" required>
-      
-              <label for="dataNascimento">Data de Nascimento:</label>
-              <input type="date" id="dataNascimento" required>
-      
-              <label for="genero">Gênero:</label>
-              <select id="genero">
-                  <option value="masculino">Masculino</option>
-                  <option value="feminino">Feminino</option>
-                  <option value="outro">Outro</option>
-              </select>
-      
-          </form>
-      
-          <p id="mensagem"></p>
-      
-          <script>
-              function cadastrarUsuario() {
-                  const nome = document.getElementById('nome').value;
-                  const sobrenome = document.getElementById('sobrenome').value;
-                  const email = document.getElementById('email').value;
-                  const senha = document.getElementById('senha').value;
-                  const dataNascimento = document.getElementById('dataNascimento').value;
-                  const genero = document.getElementById('genero').value;
-      
-                  if (!nome || !sobrenome || !email || !senha || !dataNascimento || !genero) {
-                      document.getElementById('mensagem').textContent = 'Por favor, preencha todos os campos.';
-                      return;
-                  }
-
-              }
-          </script>
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
         </div>
+
+        <h1>Cadastro de Usuário</h1>
+
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="nome" required>
+
+        <label for="sobrenome" class="form-label">Sobrenome:</label>
+        <input type="text" class="form-control" id="sobrenome" required>
+
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" required>
+
+        <label for="senha" class="form-label">Senha:</label>
+        <input type="password" class="form-control" id="senha" required>
+
+        <label for="dataNascimento" class="form-label">Data de Nascimento:</label>
+        <input type="date" class="form-control" id="dataNascimento" required>
+
+        <label for="genero" class="form-label">Gênero:</label>
+        <select class="form-select" id="genero">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select>
+
+        <div class="col-12">
+            <button type="button" class="btn btn-primary" onclick="cadastrarUsuario()">Cadastrar</button>
+        </div>
+
+        <p id="mensagem"></p>
     </form>
+    
+    <script>
+        function cadastrarUsuario() {
+            const nome = document.getElementById('nome').value;
+            const sobrenome = document.getElementById('sobrenome').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            const dataNascimento = document.getElementById('dataNascimento').value;
+            const genero = document.getElementById('genero').value;
+
+            if (!nome || !sobrenome || !email || !senha || !dataNascimento || !genero) {
+                document.getElementById('mensagem').textContent = 'Por favor, preencha todos os campos.';
+                return;
+            }
+
+            // Você pode adicionar código para enviar os dados para um servidor aqui.
+            // Neste exemplo, apenas exibiremos uma mensagem de sucesso.
+
+            document.getElementById('mensagem').textContent = `Usuário ${nome} ${sobrenome} cadastrado com sucesso!`;
+            document.getElementById('cep').value = '';
+            document.getElementById('rua').value = '';
+            document.getElementById('numero').value = '';
+            document.getElementById('bairro').value = '';
+            document.getElementById('cidade').value = '';
+            document.getElementById('estado').value = '';
+            document.getElementById('cadastroForm').reset();
+        }
+    </script>
+
     <script type="text/javascript" src="./controller.js"></script>
 </body>
 
