@@ -25,6 +25,18 @@ const preencherFormulario = (endereco) => {
     document.getElementById('cidade').value = endereco.localidade;
     document.getElementById('estado').value = endereco.uf;
 };
+function cadastrarUsuario() {
+    const nome = document.getElementById('nome').value;
+    const sobrenome = document.getElementById('sobrenome').value;
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+    const dataNascimento = document.getElementById('dataNascimento').value;
+    const genero = document.getElementById('genero').value;
+
+    if (!nome || !sobrenome || !email || !senha || !dataNascimento || !genero) {
+        document.getElementById('mensagem').textContent = 'Por favor, preencha todos os campos.';
+        return;}
+    }
 
 // Consumo da API do ViaCEP
 const pesquisarCep = async () => {
