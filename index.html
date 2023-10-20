@@ -56,13 +56,46 @@
       
           <p id="mensagem"></p>
       
+          <h1>Cadastro de Usuário</h1>
+
+          <form id="cadastroForm">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" required>
+      
+              <label for="sobrenome">Sobrenome:</label>
+              <input type="text" id="sobrenome" required>
+      
+              <label for="email">Email:</label>
+              <input type="email" id="email" required>
+      
+              <label for="senha">Senha:</label>
+              <input type="password" id="senha" required>
+      
+              <label for="dataNascimento">Data de Nascimento:</label>
+              <input type="date" id="dataNascimento" required>
+      
+              <label for="genero">Gênero:</label>
+              <select id="genero">
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                  <option value="outro">Outro</option>
+              </select>
+      
+              <button type="button" onclick="cadastrarUsuario()">Cadastrar</button>
+          </form>
+      
+          <p id="mensagem"></p>
+      
           <script>
               function cadastrarUsuario() {
                   const nome = document.getElementById('nome').value;
+                  const sobrenome = document.getElementById('sobrenome').value;
                   const email = document.getElementById('email').value;
                   const senha = document.getElementById('senha').value;
+                  const dataNascimento = document.getElementById('dataNascimento').value;
+                  const genero = document.getElementById('genero').value;
       
-                  if (!nome || !email || !senha) {
+                  if (!nome || !sobrenome || !email || !senha || !dataNascimento || !genero) {
                       document.getElementById('mensagem').textContent = 'Por favor, preencha todos os campos.';
                       return;
                   }
@@ -70,11 +103,10 @@
                   // Você pode adicionar código para enviar os dados para um servidor aqui.
                   // Neste exemplo, apenas exibiremos uma mensagem de sucesso.
       
-                  document.getElementById('mensagem').textContent = `Usuário ${nome} cadastrado com sucesso!`;
+                  document.getElementById('mensagem').textContent = `Usuário ${nome} ${sobrenome} cadastrado com sucesso!`;
                   document.getElementById('cadastroForm').reset();
               }
           </script>
-        </div>
         <div class="col-12">
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </div>
