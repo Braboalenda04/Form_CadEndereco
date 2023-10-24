@@ -98,6 +98,20 @@
         </div>
         <p id="mensagem"></p>
     </form>
+
+    <!-- JavaScript (Você precisa criar a função cadastrarUsuario) -->
+    <script>
+        function cadastrarUsuario() {
+            // Lógica para cadastrar o usuário aqui
+            const nome = document.getElementById('nome').value;
+            const sobrenome = document.getElementById('sobrenome').value;
+            // Adicione o restante dos campos e a lógica necessária aqui
+            // Exemplo: const email = document.getElementById('email').value;
+            
+            // Exemplo de exibição de mensagem
+            document.getElementById('mensagem').textContent = `Usuário ${nome} ${sobrenome} cadastrado com sucesso!`;
+        }
+    </script>
 </body>
 
 </html>
