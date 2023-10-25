@@ -1,7 +1,6 @@
 # Índice
-<h3>Este código é responsável por consumir a API do ViaCEP para buscar informações de endereço com base em um CEP inserido em um formulário HTML. Ele faz uso de funções para limpar o formulário, verificar se o CEP é válido, preencher o formulário com os dados do endereço e lidar com erros ou CEPs incorretos. Além disso, ele adiciona um evento ao campo de entrada de CEP para acionar a pesquisa quando o campo perde o foco.
-Certifique-se de que a página HTML associada tenha os elementos com os IDs corretos para rue o código funcione
-adequadament</h3>
+<h3>1 -shein para cadastrar tem que colocar o número de celular para entrar em contato, depois criar uma senha para sua conta cadstrada.Depois que fez isso tem que colocar seu indereço para chegar os produtos que você pediu.
+2-</h3>
 
 # Índice
 [Introducção](#introduc%C3%A7%C3%A3o)
