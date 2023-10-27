@@ -1,25 +1,39 @@
-function cadastrarUsuario() {
-    const nome = document.getElementById('nome').value;
-    const sobrenome = document.getElementById('sobrenome').value;
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('senha').value;
-    const dataNascimento = document.getElementById('dataNascimento').value;
-    const genero = document.getElementById('genero').value;
+function preencherEndereco() {
+    const cep = document.getElementById("cep").value;
+    const ruaInput = document.getElementById("rua");
+    const bairroInput = document.getElementById("bairro");
+    const cidadeInput = document.getElementById("cidade");
+    const estadoInput = document.getElementById("estado");
 
-    if (!nome || !sobrenome || !email || !senha || !dataNascimento || !genero) {
-        document.getElementById('mensagem').textContent = 'Por favor, preencha todos os campos.';
-        return;
+    if (/^\d{8}$/.test(cep)) {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(response => response.json())
+            .then(data => {
+                ruaInput.value = data.logradouro;
+                bairroInput.value = data.bairro;
+                cidadeInput.value = data.localidade;
+                estadoInput.value = data.uf;
+            })
+            .catch(error => {
+                console.error("Erro ao buscar o CEP:", error);
+            });
+    } else {
+        console.error("CEP inválido. Digite um CEP válido.");
+    }
+}
+
+function cadastrarUsuario() {
+    const camposObrigatorios = ["nome", "sobrenome", "email", "senha", "dataNascimento", "genero", "cpf", "rg","cep","rua","bairro","cidade","estado"];
+
+    for (const campo of camposObrigatorios) {
+        const campoInput = document.getElementById(campo);
+        if (!campoInput.value) {
+            alert(`O campo ${campoInput.getAttribute("id")} é obrigatório e não foi preenchido.`);
+            return;
+        }
     }
 
-    // Você pode adicionar código para enviar os dados para um servidor aqui.
-    // Neste exemplo, apenas exibiremos uma mensagem de sucesso.
-
-    document.getElementById('mensagem').textContent = `Usuário ${nome} ${sobrenome} cadastrado com sucesso!`;
-    document.getElementById('cep').value = '';
-    document.getElementById('rua').value = '';
-    document.getElementById('numero').value = '';
-    document.getElementById('bairro').value = '';
-    document.getElementById('cidade').value = '';
-    document.getElementById('estado').value = '';
-    document.getElementById('cadastroForm').reset();
+    alert("Usuário cadastrado com sucesso!");
 }
+
+document.getElementById("cep").addEventListener("blur", preencherEndereco);
